@@ -16,6 +16,20 @@ export const setPlateauSizeY = event => {
 
 let nextRoverId = 0
 
+export const setRoverX = event => {
+  return {
+    type: 'SET_ROVER_X',
+    payload: event.target.value
+  }
+}
+
+export const setRoverY = event => {
+  return {
+    type: 'SET_ROVER_Y',
+    payload: event.target.value
+  }
+}
+
 export default function addRover(start, moves) {
   return {
     type: 'ADD_ROVER',
