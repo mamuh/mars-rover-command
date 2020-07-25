@@ -7,11 +7,13 @@ const SetPlateau = (props) => {
     <div className="set-plateau">
       <fieldset>
         <legend>1 - Set plateau size</legend>
-        <label for="x-coord">x</label>
-        <input type="number" min="0" id="x-coord" name="x-coord" />
+        <label>x:
+          <input type="number" min="0" id="x-coord" name="x-coord" />
+        </label>
 
-        <label for="y-coord">y</label>
-        <input type="number" min="0" id="y-coord" name="y-coord" />
+        <label>y:
+          <input type="number" min="0" id="y-coord" name="y-coord" />
+        </label>
       </fieldset>
     </div>
   );

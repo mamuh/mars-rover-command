@@ -8,12 +8,16 @@ class SetRovers extends Component {
     return (
       <div>
         <form>
+        <fieldset>
+        <legend>2 - New Rover</legend>
           <label>
             Start position:
-            <label for="x-coord-rover">x</label>
-            <input type="number" min="0" name="x-coord-rover" />
-            <label for="y-coord-rover">y</label>
-            <input type="number" min="0" name="y-coord-rover" />
+            <label>x:
+              <input type="number" min="0" name="x-coord-rover" />
+            </label>
+            <label>y:
+              <input type="number" min="0" name="y-coord-rover" />
+            </label>
           </label>
 
           <br />
@@ -43,6 +47,7 @@ class SetRovers extends Component {
           <br />
 
           <input type="submit" value="Add Rover" />
+        </fieldset>
         </form>
 
       </div>
