@@ -4,8 +4,8 @@ import { bindActionCreators } from 'redux';
 
 const Deploy = (props) => {
   return (
-    <div className="set-plateau">
-      Deploy squad
+    <div className="deploy">
+      <button>Deploy squad</button>
     </div>
   );
 };

@@ -1,36 +1,37 @@
 // TODO : CHANGE TO ES6 FUNCTION FORMAT
 
-export default function setPlateauSizeX(x = 1) {
+export const setPlateauSizeX = event => {
   return {
     type: 'SET_PLATEAU_SIZE_X',
-    payload: x
+    payload: event.target.value
   };
 }
 
-export default function setPlateauSizeY(y = 1) {
+export const setPlateauSizeY = event => {
   return {
     type: 'SET_PLATEAU_SIZE_Y',
-    payload: y
+    payload: event.target.value
   };
 }
 
 let nextRoverId = 0
 
-export default function addRover([x, y] = [0, 0]) {
+export default function addRover(start, moves) {
   return {
     type: 'ADD_ROVER',
     roverId: nextRoverId++,
-    payload: [x,y]
+    start: [],
+    moves: []
   };
 }
 
-// id as number and moves_list as array of objects
-export default function moveRover(id, moves_list) {
-  return {
-    type: 'MOVE_ROVER',
-    roverId: id,
-    payload: moves_list
-  };
-}
+// // id as number and moves_list as array of objects
+// export default function moveRover(id, moves_list) {
+//   return {
+//     type: 'MOVE_ROVER',
+//     roverId: id,
+//     payload: moves_list
+//   };
+// }
 
 

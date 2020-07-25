@@ -40,6 +40,7 @@ import { useSelector } from 'react-redux';
 const Plateau = (props) => {
   const height = useSelector(state => state.plateauY)
   const width = useSelector(state => state.plateauX)
+
   let rows = [];
       for (var i = 0; i < height; i++){
         let rowID = `row${i}`
@@ -61,5 +62,6 @@ const Plateau = (props) => {
       )
 
 }
+
 
 export default Plateau;

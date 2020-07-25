@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+import { connect, useDispatch } from 'react-redux';
 import { bindActionCreators } from 'redux';
+
 
 class SetRovers extends Component {
 
@@ -25,10 +26,10 @@ class SetRovers extends Component {
           <label>
             Direction:
             <select>
-              <option value="north">North</option>
-              <option value="north">South</option>
-              <option value="north">East</option>
-              <option value="north">West</option>
+              <option value="N">North</option>
+              <option value="S">South</option>
+              <option value="E">East</option>
+              <option value="W">West</option>
             </select>
           </label>
 
@@ -55,4 +56,15 @@ class SetRovers extends Component {
   }
 }
 
-export default SetRovers;
+const mapStateToProps = state => ({
+  counter: state.counter
+});
+
+const mapDispatchToProps = () => {
+  return null
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps()
+)(SetRovers);
