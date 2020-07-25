@@ -3,39 +3,39 @@
 export const setPlateauSizeX = event => {
   return {
     type: 'SET_PLATEAU_SIZE_X',
-    payload: event.target.value
+    payload: parseInt(event.target.value, 10)
   };
 }
 
 export const setPlateauSizeY = event => {
   return {
     type: 'SET_PLATEAU_SIZE_Y',
-    payload: event.target.value
+    payload: parseInt(event.target.value, 10)
   };
 }
 
+
+// export const setRoverX = event => {
+//   return {
+//     type: 'SET_ROVER_X',
+//     payload: parseInt(event.target.value, 10)
+//   }
+// }
+
+// export const setRoverY = event => {
+//   return {
+//     type: 'SET_ROVER_Y',
+//     payload: parseInt(event.target.value, 10)
+//   }
+// }
+
 let nextRoverId = 0
-
-export const setRoverX = event => {
-  return {
-    type: 'SET_ROVER_X',
-    payload: event.target.value
-  }
-}
-
-export const setRoverY = event => {
-  return {
-    type: 'SET_ROVER_Y',
-    payload: event.target.value
-  }
-}
-
-export default function addRover(start, moves) {
+export default function addRover(start, movements) {
   return {
     type: 'ADD_ROVER',
     roverId: nextRoverId++,
-    start: [],
-    moves: []
+    start: start,
+    movements: movements
   };
 }
 

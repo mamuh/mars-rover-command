@@ -22,15 +22,15 @@ const SetPlateau = (props) => {
   );
 };
 
-const mapStateToProps = state => ({
-  plateauX: state.plateauX,
-  plateauY: state.plateauY
-});
+// const mapStateToProps = state => ({
+//   plateauX: state.plateauX,
+//   plateauY: state.plateauY
+// });
 
-const mapDispatchToProps = () => {
-  return {
-    setPlateauSizeX, setPlateauSizeY
-  };
-};
+// const mapDispatchToProps = () => {
+//   return {
+//     setPlateauSizeX, setPlateauSizeY
+//   };
+// };
 
 export default SetPlateau;
