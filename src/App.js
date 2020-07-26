@@ -7,7 +7,9 @@ import MovesDisplay from './components/moves_display';
 import Plateau from './components/plateau';
 import Deploy from './components/deploy';
 // import Rover from './components/rover';
-import FormContainer from './components/rovers_form';
+// import FormContainer from './components/rovers_form';
+
+import AddRover from './components/third_try_form';
 
 
 function App() {
@@ -15,7 +17,7 @@ function App() {
     <div className="App">
       <h1>Mars rover command</h1>
       <SetPlateau />
-      <FormContainer />
+      <AddRover />
       <MovesDisplay />
       <Deploy />
       <Plateau />

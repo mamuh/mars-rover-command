@@ -14,21 +14,6 @@ export const setPlateauSizeY = event => {
   };
 }
 
-
-// export const setRoverX = event => {
-//   return {
-//     type: 'SET_ROVER_X',
-//     payload: parseInt(event.target.value, 10)
-//   }
-// }
-
-// export const setRoverY = event => {
-//   return {
-//     type: 'SET_ROVER_Y',
-//     payload: parseInt(event.target.value, 10)
-//   }
-// }
-
 let nextRoverId = 0
 export default function addRover(start, movements) {
   return {

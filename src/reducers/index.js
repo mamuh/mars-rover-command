@@ -9,7 +9,6 @@ const rootReducer = combineReducers({
   plateauX: PlateauXReducer,
   plateauY: PlateauYReducer,
   rovers: RoversReducer,
-  form: formReducer
 });
 
 export default rootReducer;
