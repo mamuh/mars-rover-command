@@ -1,17 +1,49 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { useSelector } from 'react-redux';
 
-class MovesDisplay extends Component {
+import RoverMoves from './rover_moves';
 
-  render() {
-    return (
-      <div className="moves-display">
-        L, M, R
-      </div>
-    );
-  }
+// class MovesDisplay extends Component {
 
-};
+//   render() {
+//     return (
+//       <div className="moves-display">
 
-export default MovesDisplay;
+//       </div>
+//     );
+//   }
+
+// };
+
+const MovesDisplay = () => {
+  const rovers = useSelector(state => state.rovers)
+  console.log(rovers)
+  return (
+    <div style={{ border: "1px solid black", height: "200px" }}>
+      {
+
+        rovers.map(rover => {
+        return (
+          <RoverMoves rover={rover} key={rover.roverId} />
+        )
+      })
+
+      }
+    </div>
+  )
+}
+
+
+// (gifs.map(({id}) => {
+//               return (
+//                 <Gif id={id} key={id} setGif={setGif} />
+//               );
+
+// function mapStateToProps(state) {
+//   // console.log(state.rovers)
+//   return { rovers: state.rovers }
+// }
+
+export default MovesDisplay

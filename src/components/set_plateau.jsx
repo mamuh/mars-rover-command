@@ -9,7 +9,7 @@ const SetPlateau = (props) => {
   return (
     <div className="set-plateau">
       <fieldset>
-        <legend>1 - Set plateau size</legend>
+        <h4>SET PLATEAU SIZE</h4>
         <label>x:
           <input type="number" min="1" id="x-coord" name="x-coord" onChange={(event) => dispatch(setPlateauSizeX(event))} />
         </label>

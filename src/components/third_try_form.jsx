@@ -16,39 +16,40 @@ const AddRover = ({ dispatch }) => {
           console.log(movementsArray)
           dispatch(addRover({"x": parseInt(startX.value), "y": parseInt(startY.value), "direction": startDirection.value}, movementsArray));
           movementsArray = []
-          startX = ""
-          startY = ""
-          startDirection = ""
         }}
       >
-        x:<input id="x" ref={node => (startX = node)} />
-        y:<input ref={node => (startY = node)} />
+        <fieldset>
+          <h4>SET ROVER</h4>
 
-        <label>
-          Direction:
-          <select ref={node => (startDirection = node)}>
-            <option></option>
-            <option value="N">North</option>
-            <option value="S">South</option>
-            <option value="E">East</option>
-            <option value="W">West</option>
-          </select>
-        </label>
+          x:<input type="number" min="0" ref={node => (startX = node)} />
+          y:<input type="number" min="0" ref={node => (startY = node)} />
 
-        <br />
+          <label>
+            Direction:
+            <select ref={node => (startDirection = node)}>
+              <option></option>
+              <option value="N">North</option>
+              <option value="S">South</option>
+              <option value="E">East</option>
+              <option value="W">West</option>
+            </select>
+          </label>
 
-        <label>
-          Movements:
-          <div>
-            <input readOnly />
-          </div>
-          <button type="button" onClick={() => movementsArray.push("L")}>Left</button>
-          <button type="button" onClick={() => movementsArray.push("R")}>Right</button>
-          <button type="button" onClick={() => movementsArray.push("M")}>Move</button>
-        </label>
+          <br /> <br />
 
+          <label>
+            Movements:
+            <div>
+              <input readOnly />
+            </div>
+            <button type="button" onClick={() => movementsArray.push("L")}>Left</button>
+            <button type="button" onClick={() => movementsArray.push("R")}>Right</button>
+            <button type="button" onClick={() => movementsArray.push("M")}>Move</button>
+          </label>
 
-        <button type="submit">Add Rover</button>
+          <br /> <br />
+          <button type="submit">Add Rover</button>
+        </fieldset>
       </form>
     </div>
   )
