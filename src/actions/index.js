@@ -32,7 +32,7 @@ export const deployRovers = plateauAndRoversObj => {
       console.log(response.data.data);
       dispatch({
         type: 'DEPLOY_ROVERS',
-        payload: response.data.data
+        positions: response.data.data.positions
       })
     })
    .catch(error => {
