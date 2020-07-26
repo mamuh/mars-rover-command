@@ -1,0 +1,17 @@
+@import 'app';
+@import 'plateau';
+@import 'div';
+@import 'rover_pannel';
+
+h1 {
+  color: #ce1a1a;
+}
+
+body {
+  background-color: black;
+  //background-image: url('/marsbg.jpg');
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
