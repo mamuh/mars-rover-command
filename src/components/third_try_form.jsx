@@ -19,7 +19,7 @@ const AddRover = ({ dispatch }) => {
         }}
       >
         <fieldset>
-          <h4>SET ROVER</h4>
+          <h4>SET NEW ROVER</h4>
 
           x:<input type="number" min="0" ref={node => (startX = node)} />
           y:<input type="number" min="0" ref={node => (startY = node)} />

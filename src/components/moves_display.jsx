@@ -22,6 +22,7 @@ const MovesDisplay = () => {
   console.log(rovers)
   return (
     <div style={{ border: "1px solid black", height: "200px" }}>
+      <h4>ROVERS</h4>
       {
 
         rovers.map(rover => {
