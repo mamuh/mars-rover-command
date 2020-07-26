@@ -19,7 +19,7 @@ import RoverMoves from './rover_moves';
 
 const MovesDisplay = () => {
   const rovers = useSelector(state => state.rovers)
-  console.log(rovers)
+
   return (
     <div style={{ border: "1px solid black", height: "200px" }}>
       <h4>ROVERS</h4>
@@ -27,7 +27,7 @@ const MovesDisplay = () => {
 
         rovers.map(rover => {
         return (
-          <RoverMoves rover={rover} key={rover.roverId} />
+          <RoverMoves rover={rover} />
         )
       })
 
@@ -35,16 +35,5 @@ const MovesDisplay = () => {
     </div>
   )
 }
-
-
-// (gifs.map(({id}) => {
-//               return (
-//                 <Gif id={id} key={id} setGif={setGif} />
-//               );
-
-// function mapStateToProps(state) {
-//   // console.log(state.rovers)
-//   return { rovers: state.rovers }
-// }
 
 export default MovesDisplay

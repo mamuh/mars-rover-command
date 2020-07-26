@@ -13,7 +13,6 @@ const AddRover = ({ dispatch }) => {
       <form
         onSubmit={e => {
           e.preventDefault()
-          console.log(movementsArray)
           dispatch(addRover({"x": parseInt(startX.value), "y": parseInt(startY.value), "direction": startDirection.value}, movementsArray));
           movementsArray = []
         }}

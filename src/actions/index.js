@@ -1,5 +1,7 @@
 // TODO : CHANGE TO ES6 FUNCTION FORMAT
 
+import axios from 'axios';
+
 export const setPlateauSizeX = event => {
   return {
     type: 'SET_PLATEAU_SIZE_X',
@@ -14,23 +16,29 @@ export const setPlateauSizeY = event => {
   };
 }
 
-let nextRoverId = 0
+// let nextRoverId = 0
 export default function addRover(start, movements) {
   return {
     type: 'ADD_ROVER',
-    roverId: nextRoverId++,
+    // roverId: nextRoverId++,
     start: start,
     movements: movements
   };
 }
 
-// // id as number and moves_list as array of objects
-// export default function moveRover(id, moves_list) {
-//   return {
-//     type: 'MOVE_ROVER',
-//     roverId: id,
-//     payload: moves_list
-//   };
-// }
-
+export const deployRovers = plateauAndRoversObj => {
+  return (dispatch) => {
+    axios.post('https://mars-rover-command.herokuapp.com/rover/deploy', { plateauAndRoversObj } )
+    .then(response => {
+      console.log(response);
+      dispatch({
+        type: 'DEPLOY_ROVERS',
+        payload: response.data
+      })
+    })
+   .catch(error => {
+      console.log(error);
+    })
+  }
+}
 

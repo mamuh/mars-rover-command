@@ -3,7 +3,7 @@ const roversReducer = (state = [], action) => {
     case 'ADD_ROVER':
       return [
         ...state, {
-          roverId: action.roverId,
+          // roverId: action.roverId,
           start: action.start,
           movements: action.movements
         }
@@ -14,14 +14,3 @@ const roversReducer = (state = [], action) => {
 }
 
 export default roversReducer;
-
-
-// let nextRoverId = 0
-// export default function addRover(start, moves) {
-//   return {
-//     type: 'ADD_ROVER',
-//     roverId: nextRoverId++,
-//     start: {},
-//     movements: []
-//   };
-// }
