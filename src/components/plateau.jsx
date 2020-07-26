@@ -60,7 +60,6 @@ const Plateau = (props) => {
            </table>
         </div>
       )
-
 }
 
 

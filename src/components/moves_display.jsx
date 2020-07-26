@@ -21,7 +21,7 @@ const MovesDisplay = () => {
   const rovers = useSelector(state => state.rovers)
 
   return (
-    <div style={{ height: "200px" }} className="rovers-div div">
+    <div className="rovers-div div">
       <h4>ROVERS</h4>
       {
 
