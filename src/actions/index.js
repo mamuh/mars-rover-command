@@ -1,5 +1,4 @@
 // TODO : CHANGE TO ES6 FUNCTION FORMAT
-
 import axios from 'axios';
 
 export const setPlateauSizeX = event => {
@@ -28,12 +27,12 @@ export default function addRover(start, movements) {
 
 export const deployRovers = plateauAndRoversObj => {
   return (dispatch) => {
-    axios.post('https://mars-rover-command.herokuapp.com/rover/deploy', { plateauAndRoversObj } )
+    return axios.post('https://mars-rover-command.herokuapp.com/rover/deploy', plateauAndRoversObj )
     .then(response => {
-      console.log(response);
+      console.log(response.data.data);
       dispatch({
         type: 'DEPLOY_ROVERS',
-        payload: response.data
+        payload: response.data.data
       })
     })
    .catch(error => {

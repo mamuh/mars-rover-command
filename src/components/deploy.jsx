@@ -30,12 +30,25 @@ const Deploy = () => {
     "rovers": rovers
   }
 
+  // const plateauAndRoversObj = {
+  //   "plateau": {
+  //     "x": 5,
+  //     "y": 6
+  //   },
+  //   "rovers": [
+  //     {
+  //       "start": {"x": 1, "y": 0, "direction": "S"},
+  //       "movements": ["L", "M", "R"]
+  //     }
+  //   ]
+  // }
+
   console.log(plateauAndRoversObj)
 
   return (
-    <button onClick={e => dispatch(deployRovers(plateauAndRoversObj))}>{
-      "Deploy squad"
-    }</button>
+    <button onClick={e => dispatch(deployRovers(plateauAndRoversObj))}>
+      Deploy squad
+    </button>
   )
 }
 
