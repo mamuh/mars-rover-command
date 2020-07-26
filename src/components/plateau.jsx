@@ -42,12 +42,12 @@ const Plateau = (props) => {
   const width = useSelector(state => state.plateauX)
 
   let rows = [];
-      for (var i = 0; i < height; i++){
+      for (var i = height; i > 0; i--){
         let rowID = `row${i}`
         let cell = []
         for (var idx = 0; idx < width; idx++){
-          let cellID = `cell${i}-${idx}`
-          cell.push(<td key={cellID} id={cellID}></td>)
+          let cellID = `x${idx}-y${i-1}`
+          cell.push(<td key={cellID} id={cellID}>{cellID}</td>)
         }
         rows.push(<tr key={i} id={rowID}>{cell}</tr>)
       }
