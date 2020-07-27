@@ -15,11 +15,11 @@ export const setPlateauSizeY = event => {
   };
 }
 
-// let nextRoverId = 0
+let nextRoverId = 0
 export default function addRover(start, movements) {
   return {
     type: 'ADD_ROVER',
-    // roverId: nextRoverId++,
+    roverId: nextRoverId++,
     start: start,
     movements: movements
   };
