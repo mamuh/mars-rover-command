@@ -62,7 +62,7 @@ class Plateau extends Component {
     }
 
 
-
+    // setting plateau size from form input
     let rows = [];
     for (var i = plateauY; i > 0; i--){
       let rowID = `row${i}`

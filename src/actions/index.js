@@ -1,4 +1,3 @@
-// TODO : CHANGE TO ES6 FUNCTION FORMAT
 import axios from 'axios';
 
 export const setPlateauSizeX = event => {
@@ -16,7 +15,7 @@ export const setPlateauSizeY = event => {
 }
 
 let nextRoverId = 0
-export default function addRover(start, movements) {
+export const addRover = (start, movements) => {
   return {
     type: 'ADD_ROVER',
     roverId: nextRoverId++,

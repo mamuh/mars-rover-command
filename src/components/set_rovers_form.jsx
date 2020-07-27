@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect, useSelector } from 'react-redux'
-import addRover from '../actions'
+import { addRover } from '../actions'
 
 const AddRover = ({ dispatch }) => {
   let startX
