@@ -27,7 +27,7 @@ const MovesDisplay = () => {
 
         rovers.map(rover => {
         return (
-          <RoverMoves rover={rover} />
+          <RoverMoves rover={rover} key={rover.roverId} />
         )
       })
 

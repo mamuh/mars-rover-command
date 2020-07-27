@@ -3,7 +3,7 @@ const roversReducer = (state = [], action) => {
     case 'ADD_ROVER':
       return [
         ...state, {
-          // roverId: action.roverId,
+          roverId: action.roverId,
           start: action.start,
           movements: action.movements
         }
