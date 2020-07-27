@@ -41,3 +41,9 @@ export const deployRovers = plateauAndRoversObj => {
   }
 }
 
+export const resetRovers = () => {
+  return {
+    type: 'RESET_ROVERS',
+    payload: []
+  }
+}

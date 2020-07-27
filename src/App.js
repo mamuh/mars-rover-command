@@ -5,7 +5,7 @@ import SetPlateau from './components/set_plateau';
 import MovesDisplay from './components/moves_display';
 import Plateau from './components/plateau';
 import Deploy from './components/deploy';
-import AddRover from './components/third_try_form';
+import AddRover from './components/set_rovers_form';
 
 
 function App() {

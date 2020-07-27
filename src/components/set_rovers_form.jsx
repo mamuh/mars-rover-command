@@ -7,6 +7,11 @@ const AddRover = ({ dispatch }) => {
   let startY
   let startDirection
   let movementsArray = []
+  let movesInput
+
+  const addDirection = (direction) => {
+    movesInput.value += direction
+  }
 
   return (
     <div className="set-new-rover-div div">
@@ -15,6 +20,7 @@ const AddRover = ({ dispatch }) => {
           e.preventDefault()
           dispatch(addRover({"x": parseInt(startX.value), "y": parseInt(startY.value), "direction": startDirection.value}, movementsArray));
           movementsArray = []
+          e.target.reset()
         }}
       >
 
@@ -41,11 +47,24 @@ const AddRover = ({ dispatch }) => {
         <label>
           Movements:
           <div>
-            <input readOnly />
+            <input ref={node => (movesInput = node)} readOnly />
           </div>
-          <button type="button" onClick={() => movementsArray.push("L")}>Left</button>
-          <button type="button" onClick={() => movementsArray.push("R")}>Right</button>
-          <button type="button" onClick={() => movementsArray.push("M")}>Move</button>
+          <button type="button" onClick={(e) => {
+              addDirection("L")
+              movementsArray.push("L")
+            }}>Left
+          </button>
+          <button type="button" onClick={(e) => {
+              addDirection("R")
+              movementsArray.push("R")
+            }}>Right
+          </button>
+          <button type="button" onClick={(e) => {
+              addDirection("M")
+              movementsArray.push("M")
+            }}>Move
+          </button>
+
         </label>
 
         <br /> <br />

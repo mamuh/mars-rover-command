@@ -8,6 +8,8 @@ const roversReducer = (state = [], action) => {
           movements: action.movements
         }
       ]
+    case 'RESET_ROVERS':
+      return action.payload
     default:
       return state
   }

@@ -24,7 +24,6 @@ const MovesDisplay = () => {
     <div className="rovers-div div">
       <h4>ROVERS</h4>
       {
-
         rovers.map(rover => {
         return (
           <RoverMoves rover={rover} key={rover.roverId} />
