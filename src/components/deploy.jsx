@@ -11,30 +11,30 @@ const Deploy = () => {
   const parsedRovers = []
   rovers.map(rover => parsedRovers.push(Object.assign({}, { start: rover.start }, { movements: rover.movements })))
 
-  // const plateauAndRoversObj = {
-  //   "plateau": {
-  //     "x": plateauX,
-  //     "y": plateauY
-  //   },
-  //   "rovers": parsedRovers
-  // }
-
   const plateauAndRoversObj = {
     "plateau": {
-      "x": 5,
-      "y": 6
+      "x": plateauX,
+      "y": plateauY
     },
-    "rovers": [
-      {
-        "start": {"x": 1, "y": 0, "direction": "S"},
-        "movements": ["L", "M", "R"]
-      },
-      {
-        "start": {"x": 0, "y": 1, "direction": "N"},
-        "movements": ["R", "M", "L"]
-      }
-    ]
+    "rovers": parsedRovers
   }
+
+  // const plateauAndRoversObj = {
+  //   "plateau": {
+  //     "x": 5,
+  //     "y": 6
+  //   },
+  //   "rovers": [
+  //     {
+  //       "start": {"x": 1, "y": 0, "direction": "S"},
+  //       "movements": ["L", "M", "R"]
+  //     },
+  //     {
+  //       "start": {"x": 0, "y": 1, "direction": "N"},
+  //       "movements": ["R", "M", "L"]
+  //     }
+  //   ]
+  // }
 
   console.log(plateauAndRoversObj)
 

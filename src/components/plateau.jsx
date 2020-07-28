@@ -4,6 +4,7 @@ import { bindActionCreators } from 'redux';
 import { useSelector } from 'react-redux';
 import store from '../store'
 
+
 class Plateau extends Component {
   constructor(props) {
     super(props);
@@ -13,7 +14,8 @@ class Plateau extends Component {
     this.state = {
       plateauX: 1,
       plateauY: 1,
-      positions: []
+      positions: [],
+      selectedPositions: []
     }
 
     store.subscribe(() => {
@@ -28,38 +30,15 @@ class Plateau extends Component {
   render() {
     const { plateauX, plateauY, positions } = this.state
 
-    let counter = 0
-    const roverPositions = []
-    const mapPosition = positions => {
-      positions.map(position => {
-        const startX = position.x
-        const startY = position.y
-        const startDirection = position.direction
-        roverPositions.push(Object.assign({}, {x: startX}, {y: startY}, {direction: startDirection}, {roverId: counter}))
 
-        const route = position.route
-        route.map(route => {
-          const routeX = route.x
-          const routeY = route.y
-          const routeDirection = route.direction
-          roverPositions.push(Object.assign({}, {x: routeX}, {y: routeY}, {direction: routeDirection}, {roverId: counter}))
-        })
-        console.log(roverPositions)
-        counter++
-      })
-    }
+    // const displayPositions = () => {
+    //   const { positions, selectedPositions } = this.state
 
-    mapPosition(positions)
+    //   this.setState({ selectedPositions: positions })
+    // }
 
 
-    const displayPosition = (roverPositions) => {
-      roverPositions.map(position => {
-        const x = position.x
-        const y = position.y
-        const direction = position.direction
-        const id = position.roverId
-      })
-    }
+
 
 
     // setting plateau size from form input
@@ -69,7 +48,18 @@ class Plateau extends Component {
       let cell = []
       for (var idx = 0; idx < plateauX; idx++){
         let cellID = `x${idx}y${i-1}`
-        cell.push(<td className="" ref={this.cellID} key={cellID} id={cellID}>{cellID}</td>)
+        let classname = this.state.positions.find(position => position.route[0].x == idx && position.route[0].y == i-1) ? "selected" : "null"
+        setTimeout(() => classname = this.state.positions.find(position => position.route[1].x == idx && position.route[1].y == i-1) ? "selected" : "null" , 2000)
+
+        cell.push(
+          <td
+            className={classname}
+            ref={this.cellID}
+            key={cellID}
+            id={cellID}>
+            {cellID}
+          </td>
+         )
       }
       rows.push(<tr key={i} id={rowID}>{cell}</tr>)
     }
