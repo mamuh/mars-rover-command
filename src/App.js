@@ -21,6 +21,9 @@ function App() {
         <Deploy />
       </div>
       <div className="right-side">
+        <video autoPlay muted loop>
+          <source src={process.env.PUBLIC_URL + '/mars-horizon.mp4'} type="video/mp4" />
+        </video>
         <Plateau />
       </div>
     </div>

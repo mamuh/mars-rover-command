@@ -5,4 +5,10 @@
   color: white;
   font-family: 'Rubik', sans-serif;
   padding: 5px 10px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
 }
