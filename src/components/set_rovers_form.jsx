@@ -19,8 +19,8 @@ const AddRover = ({ dispatch }) => {
     const operator = e.target.innerText
 
     if (operator == "+" && coord == "x") {
-      if (parseInt(startX.value) >= maxX) {
-        startX.value = maxX
+      if (parseInt(startX.value) >= maxX -1) {
+        startX.value = maxX - 1
       } else {
         startX.value++
       }
@@ -31,8 +31,8 @@ const AddRover = ({ dispatch }) => {
         startX.value--
       }
     } else if (operator == '+' && coord == "y") {
-      if (parseInt(startY.value) >= maxY) {
-        startY.value = maxX
+      if (parseInt(startY.value) >= maxY - 1) {
+        startY.value = maxY - 1
       } else {
         startY.value++
       }
