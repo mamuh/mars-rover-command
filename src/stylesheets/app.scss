@@ -1,7 +1,20 @@
 .App {
   text-align: center;
-  width: 75vw;
+  width: 100vw;
+  height: 100vh;
   margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.left-side {
+  flex: 0 0 55%;
+}
+
+.right-side {
+  flex: 0 0 45%;
+  background-color: #2e3c49;
 }
 
 .App-logo {

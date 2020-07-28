@@ -11,14 +11,18 @@ import AddRover from './components/set_rovers_form';
 function App() {
   return (
     <div className="App">
-      <h1>Mars rover command</h1>
-      <SetPlateau />
-      <div className="rover-pannel">
-        <AddRover />
-        <MovesDisplay />
+      <div className="left-side">
+        <h1>Mars rover command</h1>
+        <SetPlateau />
+        <div className="rover-pannel">
+          <AddRover />
+          <MovesDisplay />
+        </div>
+        <Deploy />
       </div>
-      <Deploy />
-      <Plateau />
+      <div className="right-side">
+        <Plateau />
+      </div>
     </div>
   );
 }

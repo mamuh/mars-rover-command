@@ -2,16 +2,25 @@
 @import 'plateau';
 @import 'div';
 @import 'rover_pannel';
+@import 'buttons';
 
-h1 {
-  color: black;
-}
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 body {
-  background-color: grey;
+  background-color: #263240;
   //background-image: url('/marsbg.jpg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+}
+
+h4 {
+  margin: 0 0 5px 0;
+}
+
+input {
+  margin: 2px;
 }

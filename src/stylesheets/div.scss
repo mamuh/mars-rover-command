@@ -1,14 +1,15 @@
 .div {
-  background-color: rgba(255,255,255,0.9);
-  border-radius: 7px;
-  padding: 10px;
+  background-color: rgba(31,37,51,0.9);
+  border-radius: 2px;
+  padding: 20px 10px;
   margin: 10px;
+  box-shadow: 0 0 15px rgba(68,73,88,0.25)
 }
 
 .set-new-rover-div {
-  width: 60%;
+  width: 50%;
 }
 
 .rovers-div {
-  width: 40%;
+  width: 45%;
 }

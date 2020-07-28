@@ -15,22 +15,64 @@ const AddRover = ({ dispatch }) => {
     movesInput.value += direction
   }
 
+  const handleClick = (e, coord) => {
+    const operator = e.target.innerText
+
+    if (operator == "+" && coord == "x") {
+      if (parseInt(startX.value) >= maxX) {
+        startX.value = maxX
+      } else {
+        startX.value++
+      }
+    } else if (operator == '-' && coord == "x") {
+      if (parseInt(startX.value) <= 0) {
+        startX.value = 0
+      } else {
+        startX.value--
+      }
+    } else if (operator == '+' && coord == "y") {
+      if (parseInt(startY.value) >= maxY) {
+        startY.value = maxX
+      } else {
+        startY.value++
+      }
+    } else if (operator == "-" && coord == "y") {
+      if (parseInt(startY.value) <= 0) {
+        startY.value = 0
+      } else {
+        startY.value--
+      }
+    }
+
+  }
+
   return (
     <div className="set-new-rover-div div">
       <form
         onSubmit={e => {
           e.preventDefault()
-          dispatch(addRover({"x": parseInt(startX.value), "y": parseInt(startY.value), "direction": startDirection.value}, movementsArray));
-          movementsArray = []
-          e.target.reset()
-        }}
+          dispatch(addRover(
+            {
+              "x": parseInt(startX.value),
+              "y": parseInt(startY.value),
+              "direction": startDirection.value},
+              movementsArray));
+              movementsArray = []
+              e.target.reset()
+            }}
       >
 
         <h4>SET NEW ROVER</h4>
+        x:
+        <input readOnly className="rover-x-y-input" defaultValue="0" type="number" min="0" max={maxX} ref={node => (startX = node)} />
+        <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "x")}>+</button>
+        <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "x")}>-</button>
 
-        x:<input type="number" min="0" max={maxX} ref={node => (startX = node)} />
         <br />
-        y:<input type="number" min="0" max={maxY} ref={node => (startY = node)} />
+        y:
+        <input readOnly className="rover-x-y-input" defaultValue="0" type="number"min="0" max={maxY} ref={node => (startY = node)} />
+        <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "y")}>+</button>
+        <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "y")}>-</button>
         <br />
 
         <label>

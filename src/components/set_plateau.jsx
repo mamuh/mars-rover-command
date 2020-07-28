@@ -10,12 +10,14 @@ const SetPlateau = (props) => {
     <div className="set-plateau div">
 
       <h4>SET PLATEAU SIZE</h4>
-      <label>x:
-        <input type="number" min="1" max="10" id="x-coord" name="x-coord" onChange={(event) => dispatch(setPlateauSizeX(event))} />
+      <label>width:
+        <input type="range" defaultValue="0" min="1" max="10" id="x-coord" name="x-coord" onChange={(event) => dispatch(setPlateauSizeX(event))} />
       </label>
 
-      <label>y:
-        <input type="number" min="1" max="10" id="y-coord" name="y-coord" onChange={(event) => dispatch(setPlateauSizeY(event))} />
+      <br />
+
+      <label>height:
+        <input type="range" defaultValue="0" min="1" max="10" id="y-coord" name="y-coord" onChange={(event) => dispatch(setPlateauSizeY(event))} />
       </label>
 
     </div>
