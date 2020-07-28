@@ -1,17 +1,8 @@
-button {
+.button {
   background-color: #1aa94d;
   border: none;
   border-radius: 2px;
   color: white;
   font-family: 'Rubik', sans-serif;
-  margin: 0 3px;
   padding: 5px 10px;
-}
-
-
-.incrementer-decrementer {
-  background-color: #326988;
-  &:hover {
-    background-color: black;
-  }
 }

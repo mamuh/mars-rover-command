@@ -64,20 +64,24 @@ const AddRover = ({ dispatch }) => {
 
         <h4>SET NEW ROVER</h4>
         x:
-        <input readOnly className="rover-x-y-input" defaultValue="0" type="number" min="0" max={maxX} ref={node => (startX = node)} />
+        <div className="number-spinner">
         <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "x")}>+</button>
+        <input readOnly className="rover-x-y-input" defaultValue="0" type="number" min="0" max={maxX} ref={node => (startX = node)} />
         <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "x")}>-</button>
+        </div>
 
         <br />
         y:
-        <input readOnly className="rover-x-y-input" defaultValue="0" type="number"min="0" max={maxY} ref={node => (startY = node)} />
+        <div className="number-spinner">
         <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "y")}>+</button>
+        <input readOnly className="rover-x-y-input" defaultValue="0" type="number"min="0" max={maxY} ref={node => (startY = node)} />
         <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "y")}>-</button>
+        </div>
         <br />
 
         <label>
           Direction:
-          <select ref={node => (startDirection = node)}>
+          <select className="direction-select" ref={node => (startDirection = node)}>
             <option></option>
             <option value="N">North</option>
             <option value="S">South</option>

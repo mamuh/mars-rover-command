@@ -3,9 +3,54 @@
 }
 
 .rover-x-y-input {
-  border-radius: 2px;
   border: none;
   min-width: 15%;
   outline: none;
-  transition: 3s;
+}
+
+.number-spinner {
+  input {
+    height: 35px;
+    margin: 0;
+    text-align: center;
+    background-color: #24303e;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+  }
+}
+
+.incrementer-decrementer {
+  border: none;
+  border-radius: 2px;
+  font-family: 'Rubik', sans-serif;
+  background-color: #2d4b6e;
+  color: black;
+  height: 35px;
+  width: 30px;
+  color: white;
+  font-weight: bold;
+  &:hover {
+    background-color: #10273f;
+    cursor: pointer;
+    outline: none;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+.direction-select {
+
+    height: 35px;
+    margin: 0;
+    text-align: center;
+    background-color: #24303e;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+
+    &:focus {
+      outline: none;
+    }
 }
