@@ -12,7 +12,6 @@ const DataCell = ({ cellID, x, y, selectedPositions }) => {
         >
             <Fragment>
                 {cellID}
-                <span>{direction}</span>
             </Fragment>
         </td>
     )

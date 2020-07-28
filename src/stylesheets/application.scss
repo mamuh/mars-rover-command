@@ -3,12 +3,12 @@
 @import 'div';
 @import 'rover_pannel';
 @import 'buttons';
+@import 'rovers';
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
 
 body {
   background-color: #263240;
-  //background-image: url('/marsbg.jpg');
   height: 100%;
   background-position: center;
   background-repeat: no-repeat;
@@ -31,7 +31,8 @@ h4 {
 }
 
 .left-side {
-  flex: 0 0 55%;
+  flex: 0 0 50%;
+  padding: 0 30px;
 }
 
 .right-side {
