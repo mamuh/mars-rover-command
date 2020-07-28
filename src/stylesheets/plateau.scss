@@ -5,16 +5,18 @@
 
 table {
   border: 1px solid white;
-  border-radius: 7px;
   td {
     border: 1px solid white;
     border-radius: 7px;
     width: 80px;
     height: 80px;
     color: white;
-  }
-}
+    position: relative;
 
-.selected {
-  background-color: red;
+    span {
+      font-size: 30px;
+      font-weight: bold;
+      color: red;
+    }
+  }
 }

@@ -5,18 +5,6 @@ import { useSelector } from 'react-redux';
 
 import RoverMoves from './rover_moves';
 
-// class MovesDisplay extends Component {
-
-//   render() {
-//     return (
-//       <div className="moves-display">
-
-//       </div>
-//     );
-//   }
-
-// };
-
 const MovesDisplay = () => {
   const rovers = useSelector(state => state.rovers)
 

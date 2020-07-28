@@ -8,6 +8,8 @@ const AddRover = ({ dispatch }) => {
   let startDirection
   let movementsArray = []
   let movesInput
+  const maxX = useSelector(state => state.plateauX)
+  const maxY = useSelector(state => state.plateauY)
 
   const addDirection = (direction) => {
     movesInput.value += direction
@@ -26,9 +28,9 @@ const AddRover = ({ dispatch }) => {
 
         <h4>SET NEW ROVER</h4>
 
-        x:<input type="number" min="0" ref={node => (startX = node)} />
+        x:<input type="number" min="0" max={maxX} ref={node => (startX = node)} />
         <br />
-        y:<input type="number" min="0" ref={node => (startY = node)} />
+        y:<input type="number" min="0" max={maxY} ref={node => (startY = node)} />
         <br />
 
         <label>

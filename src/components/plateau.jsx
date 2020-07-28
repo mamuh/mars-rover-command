@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { useSelector } from 'react-redux';
-import store from '../store'
-
+import store from '../store';
+import DataCell from './data_cell';
 
 class Plateau extends Component {
   constructor(props) {
@@ -15,7 +15,8 @@ class Plateau extends Component {
       plateauX: 1,
       plateauY: 1,
       positions: [],
-      selectedPositions: []
+      selectedPositions: [],
+      fetched: false,
     }
 
     store.subscribe(() => {
@@ -27,38 +28,62 @@ class Plateau extends Component {
     })
   }
 
+
+  componentDidUpdate(){
+      const { positions, selectedPositions, fetched } = this.state;
+      if (positions.length > 0 && fetched === false) {
+        this.setState({
+          fetched: true
+        })
+
+        // Find position with most routes
+        const lengths = positions.map(position => position.route.length);
+        const positionIndex = lengths.indexOf(Math.max.apply(Math, lengths));
+        const routeNumber = positions[positionIndex].route.length - 1;
+
+        let routeIndex = 0;
+        // Create interval for rover animation
+        const interval = setInterval(
+          () => {
+            routeIndex++;
+            if(routeIndex === routeNumber) {
+              clearInterval(interval);
+            }
+            const newSelectedPositions = positions.map((position) => {
+                return position.route[routeIndex];
+            })
+            this.setState({
+              selectedPositions: newSelectedPositions
+            })
+            console.log(newSelectedPositions)
+          }
+        , 2000)
+      }
+    }
+
   render() {
-    const { plateauX, plateauY, positions } = this.state
+    const {
+      plateauX,
+      plateauY,
+      positions,
+      selectedPositions
+    } = this.state
 
-
-    // const displayPositions = () => {
-    //   const { positions, selectedPositions } = this.state
-
-    //   this.setState({ selectedPositions: positions })
-    // }
-
-
-
-
-
-    // setting plateau size from form input
-    let rows = [];
+    // Set plateau size from form input
+    const rows = [];
     for (var i = plateauY; i > 0; i--){
-      let rowID = `row${i}`
-      let cell = []
+      const rowID = `row${i}`
+      const cell = []
       for (var idx = 0; idx < plateauX; idx++){
-        let cellID = `x${idx}y${i-1}`
-        let classname = this.state.positions.find(position => position.route[0].x == idx && position.route[0].y == i-1) ? "selected" : "null"
-        setTimeout(() => classname = this.state.positions.find(position => position.route[1].x == idx && position.route[1].y == i-1) ? "selected" : "null" , 2000)
-
+        const cellID = `x${idx}y${i-1}`
         cell.push(
-          <td
-            className={classname}
-            ref={this.cellID}
+          <DataCell
+            y={i - 1}
+            x={idx}
             key={cellID}
-            id={cellID}>
-            {cellID}
-          </td>
+            cellID={cellID}
+            selectedPositions={selectedPositions}
+            />
          )
       }
       rows.push(<tr key={i} id={rowID}>{cell}</tr>)
