@@ -94,7 +94,7 @@ const AddRover = ({ dispatch }) => {
 
         <label>
           Movements:
-          <div>
+          <div className="moves-input">
             <input ref={node => (movesInput = node)} readOnly />
           </div>
           <button type="button" onClick={(e) => {

@@ -41,7 +41,6 @@
 }
 
 .direction-select {
-
     height: 35px;
     margin: 0;
     text-align: center;
@@ -53,4 +52,21 @@
     &:focus {
       outline: none;
     }
+}
+
+.moves-input {
+  input {
+    height: 35px;
+    margin: 10px 0;
+    text-align: center;
+    background-color: #24303e;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    padding: 0;
+    border: none;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }

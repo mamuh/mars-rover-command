@@ -39,7 +39,7 @@ const Deploy = () => {
   console.log(plateauAndRoversObj)
 
   return (
-    <button onClick={e => {
+    <button className="deploy-squad" onClick={e => {
         dispatch(resetRovers())
         dispatch(deployRovers(plateauAndRoversObj))
         }
@@ -48,17 +48,5 @@ const Deploy = () => {
     </button>
   )
 }
-
-// function mapDispatchToProps(dispatch) {
-//   return bindActionCreators({ selectCity }, dispatch);
-// }
-
-// const mapStateToProps = state => ({
-//   plateauX: state.plateauX,
-//   plateauY: state.plateauY,
-//   rovers: state.rovers
-// });
-
-// export default connect(mapStateToProps)(Deploy);
 
 export default Deploy;
