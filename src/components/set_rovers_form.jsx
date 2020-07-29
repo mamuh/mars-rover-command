@@ -85,8 +85,8 @@ const AddRover = ({ dispatch }) => {
           <br />
 
           <select className="direction-select" ref={node => (startDirection = node)}>
-            <option></option>
-            <option value="N">North</option>
+
+            <option value="N" defaultValue>North</option>
             <option value="S">South</option>
             <option value="E">East</option>
             <option value="W">West</option>
