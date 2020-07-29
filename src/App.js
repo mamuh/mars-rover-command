@@ -1,10 +1,8 @@
 import React from 'react';
 import './stylesheets/application.scss'
-
 import SetPlateau from './components/set_plateau';
 import MovesDisplay from './components/moves_display';
 import Plateau from './components/plateau';
-import Deploy from './components/deploy';
 import AddRover from './components/set_rovers_form';
 
 
