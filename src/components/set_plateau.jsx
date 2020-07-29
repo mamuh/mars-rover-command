@@ -1,6 +1,5 @@
 import React from 'react';
-import { connect, useDispatch } from 'react-redux';
-import { bindActionCreators } from 'redux';
+import { useDispatch } from 'react-redux';
 import { setPlateauSizeX, setPlateauSizeY } from '../actions';
 
 const SetPlateau = (props) => {

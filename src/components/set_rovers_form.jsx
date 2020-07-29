@@ -18,26 +18,26 @@ const AddRover = ({ dispatch }) => {
   const handleClick = (e, coord) => {
     const operator = e.target.innerText
 
-    if (operator == "+" && coord == "x") {
+    if (operator === "+" && coord === "x") {
       if (parseInt(startX.value) >= maxX -1) {
         startX.value = maxX - 1
         console.log(startX.value)
       } else {
         startX.value++
       }
-    } else if (operator == '-' && coord == "x") {
+    } else if (operator === '-' && coord === "x") {
       if (parseInt(startX.value) <= 0) {
         startX.value = 0
       } else {
         startX.value--
       }
-    } else if (operator == '+' && coord == "y") {
+    } else if (operator === '+' && coord === "y") {
       if (parseInt(startY.value) >= maxY - 1) {
         startY.value = maxY - 1
       } else {
         startY.value++
       }
-    } else if (operator == "-" && coord == "y") {
+    } else if (operator === "-" && coord === "y") {
       if (parseInt(startY.value) <= 0) {
         startY.value = 0
       } else {
@@ -65,7 +65,6 @@ const AddRover = ({ dispatch }) => {
 
         <h4>SET NEW ROVER</h4>
         <label>x position</label>
-
         <div className="number-spinner">
           <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "x")}>+</button>
           <input readOnly className="rover-x-y-input" defaultValue="0" type="number" min="0" max={maxX} ref={node => (startX = node)} />
