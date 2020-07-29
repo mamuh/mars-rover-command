@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { useSelector } from 'react-redux';
 
 class RoverMoves extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
     const { roverId, start, movements } = this.props.rover

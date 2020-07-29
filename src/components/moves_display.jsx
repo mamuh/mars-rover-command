@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { useSelector } from 'react-redux';
 
 import RoverMoves from './rover_moves';

@@ -52,33 +52,3 @@ video {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 }
-
-@media (max-width: 900px) {
-  .App {
-    flex-direction: column;
-    height: 100%;
-  }
-
-  .rover-pannel {
-    flex-direction: column;
-  }
-
-  .set-new-rover-div {
-    width: 95%;
-  }
-
-  .rovers-div {
-    width: 95%;
-  }
-
-  .right-side {
-    flex: 0 0 100%;
-    padding: 0;
-  }
-
-  .left-side {
-    flex: 0 0 100%;
-  }
-
-
-}

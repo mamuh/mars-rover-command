@@ -4,6 +4,8 @@ import PlateauYReducer from './plateau_y_reducer';
 import RoversReducer from './rovers_reducer';
 import DeployRoversReducer from './deploy_rovers_reducer';
 
+import { reducer as formReducer } from 'redux-form'
+
 const rootReducer = combineReducers({
   plateauX: PlateauXReducer,
   plateauY: PlateauYReducer,
