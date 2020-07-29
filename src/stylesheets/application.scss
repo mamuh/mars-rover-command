@@ -1,4 +1,3 @@
-@import 'app';
 @import 'plateau';
 @import 'div';
 @import 'rover_pannel';
@@ -21,7 +20,6 @@ body {
 
 h4 {
   margin: 0 0 6px 0;
-  // border-bottom: 1px solid rgba(255,255,255,0.5)
 }
 
 .App {
@@ -47,7 +45,7 @@ h4 {
 }
 
 video {
-  width: 1400px;
+  width: 1500px;
   height: 100%;
   position: absolute;
   top: 50%;
@@ -55,7 +53,7 @@ video {
   transform: translateX(-50%) translateY(-50%);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 950px) {
   .App {
     flex-direction: column;
     height: 100%;
@@ -83,12 +81,29 @@ video {
   }
 
   video {
-    height:  100vw;
+    height:  100%;
   }
 
   table {
     margin: 30px;
   }
 
+}
 
+@media (max-width: 768px) {
+  .set-new-rover-div {
+    width: 88%;
+  }
+  .rovers-div {
+    width: 88%;
+  }
+
+  video {
+    height: 100%;
+  }
+
+  table td {
+    width: 30px;
+    height: 30px;
+  }
 }
