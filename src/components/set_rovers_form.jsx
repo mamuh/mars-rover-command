@@ -62,7 +62,7 @@ const AddRover = ({ dispatch }) => {
             }}
       >
 
-        <h4>SET NEW ROVER</h4>
+        <h4>2. SET NEW ROVER</h4>
         <label>x position</label>
         <div className="number-spinner">
           <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "x")}>+</button>

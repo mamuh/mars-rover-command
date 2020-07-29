@@ -37,6 +37,7 @@ h4 {
 .left-side {
   flex: 0 0 50%;
   padding: 0 30px;
+  overflow: scroll;
 }
 
 .right-side {
@@ -80,6 +81,14 @@ video {
 
   .left-side {
     flex: 0 0 100%;
+  }
+
+  video {
+    height:  100vw;
+  }
+
+  table {
+    margin: 30px;
   }
 
 

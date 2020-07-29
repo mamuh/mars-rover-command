@@ -12,7 +12,7 @@ const MovesDisplay = () => {
 
   return (
     <div className="rovers-div div">
-      <h4>ROVERS</h4>
+      <h4>3. DEPLOY ROVERS</h4>
       <div className="rovers-list">
         {
           isLoading ?
