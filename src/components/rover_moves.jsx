@@ -6,7 +6,7 @@ class RoverMoves extends Component {
     const { roverId, start, movements } = this.props.rover
     return (
       <div className="rover-item">
-         <p>Rover {roverId + 1}: start[{start.x},{start.y},{start.direction}] - {movements.map(movement => movement+" ")}</p>
+         <b>Rover {roverId + 1}:</b> start[{start.x},{start.y},{start.direction}] - {movements.length > 0 ? movements.map(movement => movement+" ") : "standing still"}
       </div>
     )
   }

@@ -18,25 +18,26 @@ const AddRover = ({ dispatch }) => {
   const handleClick = (e, coord) => {
     const operator = e.target.innerText
 
-    if (operator === "+" && coord === "x") {
+    if (operator == "+" && coord == "x") {
       if (parseInt(startX.value) >= maxX -1) {
+        console.log('hiiii')
         startX.value = maxX - 1
       } else {
         startX.value++
       }
-    } else if (operator === '-' && coord === "x") {
+    } else if (operator == '-' && coord == "x") {
       if (parseInt(startX.value) <= 0) {
         startX.value = 0
       } else {
         startX.value--
       }
-    } else if (operator === '+' && coord === "y") {
+    } else if (operator == '+' && coord == "y") {
       if (parseInt(startY.value) >= maxY - 1) {
         startY.value = maxY - 1
       } else {
         startY.value++
       }
-    } else if (operator === "-" && coord === "y") {
+    } else if (operator == "-" && coord == "y") {
       if (parseInt(startY.value) <= 0) {
         startY.value = 0
       } else {
