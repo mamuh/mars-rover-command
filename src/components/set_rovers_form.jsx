@@ -21,7 +21,6 @@ const AddRover = ({ dispatch }) => {
     if (operator === "+" && coord === "x") {
       if (parseInt(startX.value) >= maxX -1) {
         startX.value = maxX - 1
-        console.log(startX.value)
       } else {
         startX.value++
       }
