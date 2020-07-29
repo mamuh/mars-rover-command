@@ -18,7 +18,7 @@ function App() {
           <AddRover />
           <MovesDisplay />
         </div>
-        <Deploy />
+
       </div>
       <div className="right-side">
         <video autoPlay muted loop>

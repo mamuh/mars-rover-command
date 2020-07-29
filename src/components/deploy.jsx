@@ -44,7 +44,7 @@ const Deploy = () => {
         dispatch(deployRovers(plateauAndRoversObj))
         }
       }>
-      Deploy squad
+      <span>Deploy squad </span>
     </button>
   )
 }

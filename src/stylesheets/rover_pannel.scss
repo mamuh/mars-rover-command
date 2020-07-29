@@ -17,6 +17,9 @@
     color: white;
     font-family: 'Rubik', sans-serif;
     padding: 0;
+    &:hover {
+    cursor: default;
+    }
   }
 }
 
@@ -27,9 +30,10 @@
   background-color: #2d4b6e;
   color: black;
   height: 35px;
-  width: 30px;
+  width: 40px;
   color: white;
   font-weight: bold;
+  transition: all ease 0.5s;
   &:hover {
     background-color: #216a51;
     cursor: pointer;
@@ -67,9 +71,27 @@
     padding: 0;
     border: none;
     width: 200px;
-
+    &:hover {
+      cursor: default;
+    }
     &:focus {
       outline: none;
     }
+  }
+}
+
+.rovers-list {
+  height: 78%;
+  padding: 5px;
+}
+
+.rover-item {
+  background-color: #25303E;
+  padding: 4px 5px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  p {
+    padding: 0;
+    margin: 0;
   }
 }

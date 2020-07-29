@@ -12,4 +12,12 @@
 
 .rovers-div {
   width: 45%;
+  overflow: hidden;
+  text-align: right;
+  h4 {
+    text-align: center;
+  }
+  p {
+    text-align: left;
+  }
 }
