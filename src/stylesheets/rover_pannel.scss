@@ -48,6 +48,8 @@
     color: white;
     font-family: 'Rubik', sans-serif;
     padding: 0;
+    border: none;
+    width: 150px;
 
     &:focus {
       outline: none;
@@ -64,6 +66,7 @@
     font-family: 'Rubik', sans-serif;
     padding: 0;
     border: none;
+    width: 200px;
 
     &:focus {
       outline: none;

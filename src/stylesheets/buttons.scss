@@ -12,3 +12,35 @@
     outline: none;
   }
 }
+
+.direction-button {
+  background-color: #2d4b6e;
+  margin: 0 3px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  padding: 5px 10px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
+
+#add-rover {
+  background-color: #257a43;
+  margin: 0 3px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  padding: 5px 10px;
+  &:hover {
+    cursor: pointer;
+  }
+  &:focus {
+    outline: none;
+  }
+}
