@@ -46,3 +46,10 @@ export const resetRovers = () => {
     payload: []
   }
 }
+
+export const clearPositions = () => {
+  return {
+    type: 'CLEAR_POSITIONS',
+    payload: []
+  }
+}
