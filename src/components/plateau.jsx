@@ -44,16 +44,27 @@ class Plateau extends Component {
         // Create interval for rover animation
         const interval = setInterval(
           () => {
-            routeIndex++;
-            if(routeIndex === routeNumber) {
-              clearInterval(interval);
-            }
             const newSelectedPositions = positions.map((position) => {
-                return position.route[routeIndex];
+                // verificar tamanho da array route
+                if (position.route[routeIndex]) {
+                  return position.route[routeIndex]
+                } else {
+                  return position.route[position.route.length - 1]
+                }
+
             })
             this.setState({
               selectedPositions: newSelectedPositions
             })
+            if(routeIndex === routeNumber) {
+              clearInterval(interval);
+              this.setState({
+                fetched: false,
+                positions: []
+              })
+              // limpar o state
+            }
+            routeIndex++; // esta incrementando no lugar errado, colocar depois do setstate
             console.log(newSelectedPositions)
           }
         , 2000)
