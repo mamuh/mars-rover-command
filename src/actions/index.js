@@ -26,7 +26,6 @@ export const addRover = (start, movements) => {
 }
 
 export const beginLoad = () => {
-  console.log('isloading')
   return {
     type: 'LOADING_ROVERS',
     payload: true
@@ -34,7 +33,6 @@ export const beginLoad = () => {
 }
 
 export const finishLoad = () => {
-  console.log('done loading')
   return {
     type: 'DONE_LOADING',
     payload: false
