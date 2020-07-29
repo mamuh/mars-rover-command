@@ -73,16 +73,17 @@ const AddRover = ({ dispatch }) => {
 
         <br />
         <label>y position</label>
-          <div className="number-spinner">
+        <div className="number-spinner">
           <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "y")}>+</button>
           <input readOnly className="rover-x-y-input" defaultValue="0" type="number"min="0" max={maxY} ref={node => (startY = node)} />
-        <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "y")}>-</button>
+          <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "y")}>-</button>
         </div>
         <br />
 
 
           <label>Direction:</label>
           <br />
+
           <select className="direction-select" ref={node => (startDirection = node)}>
             <option></option>
             <option value="N">North</option>
@@ -95,7 +96,7 @@ const AddRover = ({ dispatch }) => {
 
         <label>Movements:</label>
           <div className="moves-input">
-            <input ref={node => (movesInput = node)} readOnly />
+            <input className="moves-input" ref={node => (movesInput = node)} readOnly />
           </div>
           <button className="direction-button" type="button" onClick={(e) => {
               addDirection("L")
