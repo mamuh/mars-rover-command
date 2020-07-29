@@ -1,5 +1,6 @@
-import React from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import React, { Component } from 'react';
+import { connect, useSelector, useDispatch } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { deployRovers, resetRovers } from '../actions';
 
 const Deploy = () => {

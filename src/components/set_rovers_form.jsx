@@ -65,6 +65,7 @@ const AddRover = ({ dispatch }) => {
 
         <h4>SET NEW ROVER</h4>
         <label>x position</label>
+
         <div className="number-spinner">
           <button className="incrementer-decrementer" type="button" onClick={(e) => handleClick(e, "x")}>+</button>
           <input readOnly className="rover-x-y-input" defaultValue="0" type="number" min="0" max={maxX} ref={node => (startX = node)} />

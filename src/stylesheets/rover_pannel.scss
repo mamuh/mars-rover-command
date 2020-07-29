@@ -45,10 +45,10 @@
   }
 }
 
-
 .direction-select {
+    margin: 6px 0;
     height: 35px;
-    margin-top: 6px;
+    margin: 0;
     text-align: center;
     background-color: #24303e;
     color: white;
@@ -65,7 +65,7 @@
 .moves-input {
   input {
     height: 35px;
-    margin: 6px 0;
+    margin: 10px 0;
     text-align: center;
     background-color: #24303e;
     color: white;
