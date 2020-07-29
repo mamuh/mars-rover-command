@@ -44,13 +44,11 @@ class Plateau extends Component {
         const interval = setInterval(
           () => {
             const newSelectedPositions = positions.map((position) => {
-                // verificar tamanho da array route
                 if (position.route[routeIndex]) {
                   return position.route[routeIndex]
                 } else {
                   return position.route[position.route.length - 1]
                 }
-
             })
             this.setState({
               selectedPositions: newSelectedPositions
@@ -63,7 +61,7 @@ class Plateau extends Component {
               store.dispatch(clearPositions())
               clearInterval(interval);
             }
-            routeIndex++; // esta incrementando no lugar errado, colocar depois do setstate
+            routeIndex++;
             console.log(newSelectedPositions)
           }
         , 2000)

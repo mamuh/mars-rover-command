@@ -18,23 +18,6 @@ const Deploy = () => {
     "rovers": parsedRovers
   }
 
-  // const plateauAndRoversObj = {
-  //   "plateau": {
-  //     "x": 5,
-  //     "y": 6
-  //   },
-  //   "rovers": [
-  //     {
-  //       "start": {"x": 1, "y": 0, "direction": "S"},
-  //       "movements": ["L", "M", "R"]
-  //     },
-  //     {
-  //       "start": {"x": 0, "y": 1, "direction": "N"},
-  //       "movements": ["R", "M", "L"]
-  //     }
-  //   ]
-  // }
-
   console.log(plateauAndRoversObj)
 
   return (

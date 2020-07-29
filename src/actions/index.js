@@ -1,4 +1,5 @@
 import axios from 'axios';
+import store from '../store';
 
 export const setPlateauSizeX = event => {
   return {
@@ -24,8 +25,25 @@ export const addRover = (start, movements) => {
   };
 }
 
+export const beginLoad = () => {
+  console.log('isloading')
+  return {
+    type: 'LOADING_ROVERS',
+    payload: true
+  }
+}
+
+export const finishLoad = () => {
+  console.log('done loading')
+  return {
+    type: 'DONE_LOADING',
+    payload: false
+  }
+}
+
 export const deployRovers = plateauAndRoversObj => {
   return (dispatch) => {
+    store.dispatch(beginLoad())
     return axios.post('https://mars-rover-command.herokuapp.com/rover/deploy', plateauAndRoversObj )
     .then(response => {
       console.log(response.data.data);
@@ -33,6 +51,7 @@ export const deployRovers = plateauAndRoversObj => {
         type: 'DEPLOY_ROVERS',
         positions: response.data.data.positions
       })
+      store.dispatch(finishLoad())
     })
    .catch(error => {
       console.log(error);
